@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So sánh</title>
+</head>
+<body>
+    <input type="number" id="number1" placeholder="nhập vào số thứ nhất">
+    <input type="number" id="number2" placeholder="nhập vào số thứ hai">
+    <button onclick="sosanh()">so sánh</button>
+    <h3 id="result"></h3>
+    <script>
+
+        function sosanh(){
+            let number1=document.getElementById("number1").value;
+            let number2=document.getElementById("number2").value;
+            if(number1>number2){
+                document.getElementById("result").innerHTML= "số thứ nhất lớn hơn số thứ hai"
+            }else{
+                if(number1===number2){
+                    document.getElementById("result").innerHTML= "số thứ nhất bằng số thứ hai"
+                }else{
+                    document.getElementById("result").innerHTML= "số thứ nhất bé hơn số thứ hai"
+                }
+                
+        }
+    }
+    </script>
+</body>
+</html>

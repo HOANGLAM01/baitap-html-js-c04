@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+    <input type="number" id="canh1" placeholder="nhập chiều dài cạnh thứ nhất">
+    <input type="number" id="canh2" placeholder="nhập chiều dài cạnh thứ hai">
+    <button onclick="tinhchuvi()">Tính chu vi</button>
+    <button onclick="tinhdientich()">Tính diện tích</button>
+    <h3 id="result"></h3>
+    <script>
+      
+        function tinhdientich(){
+            let a = document.getElementById("canh1").parseFloat;
+            let b = document.getElementById("canh2").parseFloat;
+            let dientich = a*b;
+            document.getElementById("result").innerHTML = "diện tích = "+dientich;
+        }
+        function tinhchuvi(){
+            let a = document.getElementById("canh1").value;
+            let b = document.getElementById("canh2").value;
+            let chuvi = 2*(parseFloat(a)+parseFloat(b));
+            document.getElementById("result").innerHTML = "chu vi = "+chuvi;
+        }
+    </script>
+</body>
+</html>
