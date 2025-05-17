@@ -1,0 +1,101 @@
+Câu lệnh if-else trong javascript cũng giống như các ngôn ngữ khác, nếu điều kiện của mệnh đề đúng thì code phía trong sẽ được thực hiện, và ngược lại nếu sai thì nó sẽ không chạy code trong mệnh đề.
+Cú pháp:
+if (condition) {
+	//nếu điều kiện đúng thì thực hiện
+}
+mệnh đề else sẽ thực hiện khi điều kiện của mệnh đề if không thỏa mãn.
+if (true) {
+	// nếu đúng thì chạy code trong này
+} else {
+	//nếu sai thì chạy code trong này
+}
+Kết hợp else if.
+-Có đôi khi bạn muốn xử lý đa nhánh như làm bài toán phân loại học lực thì lúc này bạn lên dùng else if để xử lý các điều kiện khác với if.
+vd:
+let diem = 5;
+
+if (diem < 4) {
+    document.write('Học Lại');
+} else if (diem >= 4 && diem < 5.5) {
+    document.write(' Loại D');
+} else if (diem >= 5.5 && diem < 7) {
+    document.write('Loai C');
+} else if (diem >= 7 && diem < 8.5) {
+    document.write('Loại B');
+} else if (diem >= 8.5 && diem <= 10) {
+    document.write('Loai A');
+} else {
+    document.write('Điểm không hợp lệ');
+}
+if-else lồng nhau.
+-Cũng giống như bài toán trên thì chúng ta có thể sử dụng if-else lồng nhau được.
+var diem = 5;
+
+if (diem < 4) {
+    document.write('Học Lại');
+} else {
+    if (diem >= 4 && diem < 5.5) {
+        document.write(' Loại D');
+    } else {
+        if (diem >= 5.5 && diem < 7) {
+            document.write('Loai C');
+        } else {
+            if (diem >= 7 && diem < 8.5) {
+                document.write('Loại B');
+            } else {
+                if (diem >= 8.5 && diem <= 10) {
+                    document.write('Loai A');
+                } else {
+                    document.write('Điểm không hợp lệ');
+                }
+            }
+        }
+    }
+}
+if-else rút gọn.
+-Chúng ta cũng có thể rút gọn câu lệnh if-else với cú pháp như sau:
+let diem = 5;
+diem == 5 ? document.write('Điểm Bằng 5') : document.write('Diểm khác 5');
+2. Switch case.
+-Đây là một loại câu lệnh rẽ nhánh( hay còn gọi là câu lệnh điều kiện) có đặc điểm là để giải quyết các bài toán mà có các nhánh là các điều kiện cố định.
+switch (condition) {
+    case value1:
+        //code
+        break;
+    case value2:
+        //code
+        break;
+    default:
+        //code
+        break;
+}
+Trong đó:
+condition là biến muốn kiểm tra để rẽ nhánh.
+value1,value2,.. là các giá trị tương ứng của condition mà các bạn muốn rẽ nhánh.
+default là giá trị khác đối với tất cả các value trên(giống với else).
+vd:
+var so = 5;
+
+switch (so) {
+    case 0:
+        document.write('không');
+        break;
+    case 1:
+        document.write('Một');
+        break;
+    case 2:
+        document.write('Hai');
+        break;
+    case 3:
+        document.write('Ba');
+        break;
+    case 4:
+        document.write('Bốn');
+        break;
+    case 5:
+        document.write('Năm');
+        break;
+    default:
+        document.write('Không thỏa mãn');
+        break;
+}
